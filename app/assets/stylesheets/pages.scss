@@ -1,0 +1,135 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+$dominante: #210aac;
+$dominanteClaire: #9085d6;
+$complementaire: #b09c62;
+$complementaireClaire: #d8ceb1;
+$complementaireGris: #ece7d8;
+$white: #FEFDED;
+$gris: #f2f2f2;
+$noir: #31383e;
+
+.test-for-push {}
+
+html {
+  box-sizing: border-box;
+  background-color: $gris;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+  background-color: $white;
+  width: 100%;
+ //min-height: 100vh;
+}
+section {
+  height: 100vh;
+  width: 100%;
+}
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10em 0;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      font-family: "Montserrat", "Futura", Arial, sans-serif;
+    }
+  }
+footer {
+  height: 40vh;
+  width: 100%;
+}
+#landing {
+  //background-image: url("https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/99/996/996886/seamless-background-80s65-f.jpg");
+  // background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('1607-06bleu.jpg');
+  background: url('1607-06bleu.jpg');
+
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  color: $white;
+}
+
+
+#navigation {
+  background-color: $dominante;
+  font-family: "Roboto", "Futura", Arial, sans-serif;
+  color: $white;
+  height: 75px;
+  box-shadow: 0 0 1em rgba(0,0,0,0.75);
+  padding: 0 2em;
+  .nav-link {
+    color: $dominanteClaire;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+#skills {
+  // background-image: linear-gradient(rgba(33, 10, 172,0.55), rgba(33, 10, 172,0.95)),url("https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/99/996/996886/seamless-background-80s65-f.jpg");
+
+    //background-image: url('1607-06bleu_bas.jpg');
+  background: linear-gradient(rgba(33, 10, 172,0.25), rgba(33, 10, 172,0.85)), url('1607-06bleu.jpg');
+  // background-color: $gris;
+
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  color: $white;
+  td {
+    list-style-type: disc;
+    width: 200px;
+    height: 2em;
+  }
+
+}
+#portfolio{
+  background-color: $gris;
+  color: $dominante;
+}
+#bio{
+  background-image: linear-gradient(rgba(144, 133, 214,0.55), rgba(144, 133, 214,0.95)),url('1607-06bleu.jpg');
+
+  background-position: center center;
+  background-attachment: fixed;
+    background-size: cover;
+
+
+  background-color: $dominanteClaire;
+  color: $white;
+}
+#contact{
+
+  // background-image: linear-gradient(rgba(216, 206, 177,0.55), rgba(216, 206, 177,0.95)),url('1607-06bleu.jpg');
+  background-color: $complementaireClaire;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  background-color: $complementaireClaire;
+  color: $white;
+}
+#footer{
+  background-image: linear-gradient(rgba(49, 56, 62,0.55), rgba(49, 56, 62,0.95)),url('1607-06bleu.jpg');
+  // background-color: $noir;
+    background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  color: $white;
+}
+
