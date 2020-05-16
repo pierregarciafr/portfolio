@@ -1,0 +1,10 @@
+Searching 101 files for ".card"
+
+/Users/pierre/code/pierregarciafr/portfolio/app/assets/stylesheets/pages.scss:
+  107    }
+  108  }
+  109: .portfolio_card {
+  110    background-color: yellow;
+  111    border: 1px solid black;
+
+1 match in 1 file
