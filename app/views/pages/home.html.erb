@@ -5,122 +5,13 @@
   <title>Document</title>
 </head>
 <body>
-    <section id="landing">
-      <div class="container">
-        <h1>Pierre Garcia</h1>
-        <h1>Développeur Fullstack</h1>
-        <p>Concepteur et développeur de sites web. Issu d’un parcours dans les arts-appliqués,
-je . Lorem ipsum lorem ipsum Concepteur et développeur de sites web. Issu d’un parcours dans les arts-appliqués,
-Lorem ipsum lorem ipsum Concepteur et développeur de sites web. Issu d’un parcours dans les arts-appliqués je . </p>
+    <%= render 'landing' %>
+    <%= render 'nav' %>
+    <%= render 'skills' %>
+    <%= render 'portfolio' %>
+    <%= render 'bio' %>
+    <%= render 'contact' %>
+    <%= render 'footer' %>
 
-      </div>
-    </section>
-
-    <nav id="navigation" class="navbar sticky-top navbar-expand-lg">
-      <a class="navbar-brand" href="#">\ PG /</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Skills<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
-          <a class="nav-item nav-link" href="#bio">Bio</a>
-          <a class="nav-item nav-link" href="#contact">Contact</a>
-        </div>
-      </div>
-    </nav>
-
-    <section id="skills" >
-      <div class="container">
-        <h1>Skills</h1>
-        <p>Autodidacte en code depuis l’adolescence, je me reconvertis dans le développement web. En plus de mes compétences en développement, je souhaite mettre à pro t mes skills acquises dans les arts-appliqués : adaptabilité à l’exigence client, gestion d’équipe hyper-réactive, méthodes orientées résultat, autonomie et exigence qualitative. Je souhaite trouver une place stable, qui me permette d’évoluer, et développer mes connaissances, en architecture notamment.</p>
-        <table>
-          <thead>
-            <tr>
-              <td>HTML</td>
-              <td>Ruby On Rails</td>
-              <td>Photoshop</td>
-            </tr>
-            <tr>
-              <td>CSS</td>
-              <td>React</td>
-              <td>Illustrator</td>
-            <tr>
-            <tr>
-              <td>Javascipt ES6</td>
-              <td>PostgreSQL</td>
-              <td>InDesign</td>
-            </tr>
-            <tr>
-              <td>Ruby</td>
-              <td>Git / Github</td>
-            </tr>
-            <tr>
-              <td>SQL</td>
-              <td>Heroku</td>
-
-            </tr>
-            <tr>
-
-              <td>Bootstrap</td>
-            </tr>
-
-
-            </tr>
-          </thead>
-        </table>
-      </div>
-    </section>
-    <section id="portfolio">
-      <div class="container">
-        <h1>Portfolio</h1>
-      </div>
-    </section>
-    <section id="bio">
-      <div class="container">
-        <h1>Bio</h1>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="container">
-        <h1>Contact</h1>
-        <form>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
-            <select multiple class="form-control" id="exampleFormControlSelect2">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-        </form>
-      </div>
-    </section>
-    <footer id="footer">
-      <div class="container">
-        <h1>Footer</h1>
-      </div>
-    </footer>
 </body>
 </html>

@@ -12,7 +12,6 @@ $white: #FEFDED;
 $gris: #f2f2f2;
 $noir: #31383e;
 
-.test-for-push {}
 
 html {
   box-sizing: border-box;
@@ -80,7 +79,6 @@ footer {
 }
 #skills {
   // background-image: linear-gradient(rgba(33, 10, 172,0.55), rgba(33, 10, 172,0.95)),url("https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/99/996/996886/seamless-background-80s65-f.jpg");
-
     //background-image: url('1607-06bleu_bas.jpg');
   background: linear-gradient(rgba(33, 10, 172,0.25), rgba(33, 10, 172,0.85)), url('1607-06bleu.jpg');
   // background-color: $gris;
@@ -95,12 +93,52 @@ footer {
     width: 200px;
     height: 2em;
   }
-
 }
+
 #portfolio{
   background-color: $gris;
   color: $dominante;
+  height: inherit;
+  #cards_section {
+    // background-color: red;
+    width: 100%;
+    height: inherit;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: space-between;
+    align-items: center;
+
+.portfolio_card {
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+  margin: 40px 0;
+  box-shadow: 0 0 6px gray;
+  img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .portfolio_card_infos {
+    padding: 15px;
+    h4 {
+      font-size: 1em;
+      font-weight: bold;
+      color: $complementaire;
+    }
+    p {
+      font-size: 0.8em;
+      color: $noir;
+    }
+  }
+  }
+  }
 }
+
+
+
 #bio{
   background-image: linear-gradient(rgba(144, 133, 214,0.55), rgba(144, 133, 214,0.95)),url('1607-06bleu.jpg');
 
@@ -129,7 +167,6 @@ footer {
     background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-
   color: $white;
 }
 
