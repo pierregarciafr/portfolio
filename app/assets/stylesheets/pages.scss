@@ -11,7 +11,8 @@ $complementaireGris: #ece7d8;
 $white: #FEFDED;
 $gris: #f2f2f2;
 $noir: #31383e;
-
+// $url: "https://www.pexels.com/photo/background-backlight-blur-color-262713/";
+$url: 'bannerH.jpg';
 
 html {
   box-sizing: border-box;
@@ -50,11 +51,7 @@ footer {
   height: 40vh;
   width: 100%;
 }
-#landing {
-  //background-image: url("https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/99/996/996886/seamless-background-80s65-f.jpg");
-  // background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('1607-06bleu.jpg');
-  background: url('1607-06bleu.jpg');
-
+#banner{
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -78,10 +75,7 @@ footer {
   }
 }
 #skills {
-  // background-image: linear-gradient(rgba(33, 10, 172,0.55), rgba(33, 10, 172,0.95)),url("https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/99/996/996886/seamless-background-80s65-f.jpg");
-    //background-image: url('1607-06bleu_bas.jpg');
-  background: linear-gradient(rgba(33, 10, 172,0.25), rgba(33, 10, 172,0.85)), url('1607-06bleu.jpg');
-  // background-color: $gris;
+  background: linear-gradient(rgba(33, 10, 172,0.25), rgba(33, 10, 172,0.85)), url($url);
 
   background-position: center center;
   background-attachment: fixed;
@@ -140,7 +134,7 @@ footer {
 
 
 #bio{
-  background-image: linear-gradient(rgba(144, 133, 214,0.55), rgba(144, 133, 214,0.95)),url('1607-06bleu.jpg');
+  background-image: linear-gradient(rgba(144, 133, 214,0.55), rgba(144, 133, 214,0.95)),url('bannerH.jpg');
 
   background-position: center center;
   background-attachment: fixed;
@@ -162,7 +156,7 @@ footer {
   color: $white;
 }
 #footer{
-  background-image: linear-gradient(rgba(49, 56, 62,0.55), rgba(49, 56, 62,0.95)),url('1607-06bleu.jpg');
+  background-image: linear-gradient(rgba(49, 56, 62,0.55), rgba(49, 56, 62,0.95)),url('bannerH.jpg');
   // background-color: $noir;
     background-position: center center;
   background-attachment: fixed;
