@@ -81,9 +81,11 @@ footer {
 
   color: $white;
   td {
-    list-style-type: disc;
     width: 200px;
     height: 2em;
+    img {
+      margin: 10px;
+    }
   }
 }
 
@@ -104,12 +106,13 @@ footer {
 
     .portfolio_card {
       background-color: white;
-      height: 250px;
-      width: 250px;
+      height: 350px;
+      width: 400px;
       border-radius: 15px;
       margin: 40px 0;
       box-shadow: 0 0 6px gray;
       img{
+        opacity: 0.4;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
       }
