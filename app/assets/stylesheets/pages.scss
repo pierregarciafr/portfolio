@@ -15,7 +15,6 @@ $noir: #31383e;
 $url: 'bannerH.jpg';
 
 html {
-
   box-sizing: border-box;
   background-color: $gris;
   min-height: 100vh;
@@ -94,7 +93,7 @@ footer {
   box-shadow: 0 0 1em rgba(0,0,0,0.75);
   padding: 0 2em;
   .nav-link {
-    color: $dominanteClaire;
+    color: rgba(255, 255, 255, 0.75);
     &:hover {
       color: $white;
       transition: 1s;
@@ -172,8 +171,9 @@ footer {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  background-color: $dominanteClaire;
+  background-color: $complementaireClaire;
   color: $white;
+  height: inherit;
 }
 
 #contact{
@@ -240,5 +240,23 @@ footer {
       margin-right: 1.2em;
     }
   }
+}
+#bio {
+  .col {
+    padding: 0
+  }
+}
+.biocard {
+  width: 100%;
+  // border: 2px solid yellow;
+  border-radius: 20px;
+  // background-position: center center;
+  // background-attachment: fixed;
+  background-size: cover;
+}
+.biocard:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
 }
 
