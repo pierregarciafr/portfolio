@@ -7,7 +7,31 @@
         <div class="card_strip">
           <div class="row">
             <div class="col-3">
-              <%= link_to "https://pet-me-please.herokuapp.com/", target: 'blank' do %>
+              <%= link_to "https://www.guesswhat.live", target: 'blank' do %>
+                <div class="image-card" style="background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url(<%= image_path('guesswhat.jpg') %>)">
+                </div>
+              <% end %>
+            </div>
+            <div class="col-9">
+              <div class="content-card">
+                <h2>Blind test musical</h2>
+                <p>Ce jeu à reconnaissance vocale permet à l'utilisateur d'inviter d'autres joueurs, et jouer depuis chacun depuis son smartphone.
+                  Le MVP a été réalisé lors d'un sprint de 10 jours au Wagon, en équipe de 4. Nous avons utilisé les technologies ActionCable et API Rest.
+                </p>
+                <div class="icons">
+                  <%= image_tag('iconsNew/HTML.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/CSS.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/JS.svg', width: '50')  %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_strip">
+          <div class="row">
+            <div class="col-3">
+              <%= link_to "https://staticpages-pg.herokuapp.com/", target: 'blank' do %>
                 <div class="image-card" style="background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url(<%= image_path('staticpages.jpg') %>)">
                 </div>
               <% end %>
@@ -16,7 +40,8 @@
               <div class="content-card">
                 <h2>Messagerie</h2>
                 <p>Création d’une messagerie clone de Twitter d’après le cours de Michael Hart. L’inscription, l'authentification et l’identification des utilisateurs sont codés <em>from scratch</em> et reproduisent le comportement de Devise. Chaque utilisateur peut envoyer des microposts avec texte et image, et choisir de suivre d'autres utilisateurs.
-                      <div class="icons">
+                </p>
+                <div class="icons">
                   <%= image_tag('iconsNew/HTML.svg', width: '50')  %>
                   <%= image_tag('iconsNew/CSS.svg', width: '50')  %>
                   <%= image_tag('iconsNew/JS.svg', width: '50')  %>
@@ -37,7 +62,8 @@
             <div class="col-9">
               <div class="content-card">
                 <h2>Marketplace</h2>
-                <p>Création d’une messagerie clone de Twitter d’après le cours de Michael Hart. L’inscription, l'authentification et l’identification des utilisateurs sont codés <em>from scratch</em> et reproduisent le comportement de Devise. Chaque utilisateur peut envoyer des microposts avec texte et image, et choisir de suivre d'autres utilisateurs.
+                <p>Ce MVP a été réalisé en un sprint de 5 jours au Wagon en équipe de 4. Clonant Airbnb, il permet à chaque utilisateur de louer un animal domestique, et aussi de mettre le sien en location, avec géolocalisation.
+                </p>
                       <div class="icons">
                   <%= image_tag('iconsNew/HTML.svg', width: '50')  %>
                   <%= image_tag('iconsNew/CSS.svg', width: '50')  %>
@@ -47,6 +73,57 @@
             </div>
           </div>
         </div>
+
+        <div class="card_strip">
+          <div class="row">
+            <div class="col-3">
+              <%= link_to "https://www.capoeiraviola.com/", target: 'blank' do %>
+                <div class="image-card" style="background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url(<%= image_path('viola.jpg') %>)">
+                </div>
+              <% end %>
+            </div>
+            <div class="col-9">
+              <div class="content-card">
+                <h2>Association culturelle</h2>
+                <p>Refonte Front et Back de tout le site internet. Mises à jour régulières en fonction de l'actualité.
+                  Création d'une interface d'inscription en ligne.
+                                </p>
+                      <div class="icons">
+                  <%= image_tag('iconsNew/HTML.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/CSS.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/SQL.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/php.svg', width: '50')  %>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_strip">
+          <div class="row">
+            <div class="col-3">
+              <%= link_to "https://www.pierregarcia.fr/", target: 'blank' do %>
+                <div class="image-card" style="background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url(<%= image_path('siteperso.jpg') %>)">
+                </div>
+              <% end %>
+            </div>
+            <div class="col-9">
+              <div class="content-card">
+                <h2>Site personnel</h2>
+                <p>Pour créer ce site personnel d'artiste, j'ai appris HTML, CSS et javascript en autodidacte. Ce site est depuis régulièrement mis à jour, et il a également été refondu plusieurs fois pour évoluer dans l'esthétique et la technologie selon l'air du temps.</p>
+                <div class="icons">
+                  <%= image_tag('iconsNew/HTML.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/CSS.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/SQL.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/php.svg', width: '50')  %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <%# card = {link: "staticpages.jpg", title: 'Guesswhat', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
 %>
