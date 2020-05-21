@@ -1,9 +1,25 @@
-<div class="portfolio_card">
-  <div>
-    <%= image_tag("staticpages.jpg", width: '100%') %>
- </div>
-  <div class="portfolio_card_infos">
-    <h4>Static-pages</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<div class="card_strip">
+
+  <div class="row">
+    <div class="col-3">
+      <div class="image-card">
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="content-card">
+        <h2>Marketplace</h2>
+        <p>Création d’une messagerie de type Twitter d’après le cours de Michael Hart. L’inscription, l'authentification et l’identification des utilisateurs sont codés <em>from scratch</em> et reproduisent le comportement de Devise. Chaque utilisateur peut envoyer des microposts avec texte et image, et choisir de suivre d'autres utilisateurs.
+              <div class="icons">
+          <%= image_tag('iconsNew/HTML.svg', width: '50')  %>
+          <%= image_tag('iconsNew/CSS.svg', width: '50')  %>
+          <%= image_tag('iconsNew/JS.svg', width: '50')  %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Reference chargement des images
+<div class="image_card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%#= cl_image_path link, height: 300, width: 400, crop: :fill %>')">
+  Cool article
+</div> -->

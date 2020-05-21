@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-$dominante: #210aac;
-$dominanteClaire: #9085d6;
-$complementaire: #b09c62;
-$complementaireClaire: #d8ceb1;
-$complementaireGris: #ece7d8;
+$dominante: #0A0382; // RGB 10 3 130
+$dominanteClaire: #39479C;
+$complementaire: #a99c7f; // RGB 169 156 127
+$complementaireClaire: #d4cebf; // RGB 212 206 191
+$complementaireGris: #E3E0D9;
 $white: #FEFDED;
 $gris: #f2f2f2;
 $noir: #31383e;
@@ -15,6 +15,7 @@ $noir: #31383e;
 $url: 'bannerH.jpg';
 
 html {
+
   box-sizing: border-box;
   background-color: $gris;
   min-height: 100vh;
@@ -33,30 +34,56 @@ body {
 section {
   height: 100vh;
   width: 100%;
-}
   .container {
-    width: 960px;
-    margin: 0 auto;
     padding: 8em 0;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 300;
-    h1 {
-      font-size: 36px;
-      font-weight: bold;
-      font-family: "Montserrat", "Futura", Arial, sans-serif;
-    }
   }
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Montserrat", "Futura", Arial, sans-serif;
+  }
+}
 footer {
-  height: 40vh;
+  height: auto;
   width: 100%;
+  .container {
+    padding: 5em 0;
+  }
 }
 #banner{
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-
   color: $white;
+
+  p {
+    padding: 2em 0 5em 0;
+    font-weight: 200;
+  }
+  .button {
+    opacity: 0.7;
+    background-color: none;
+    border: 3px solid $complementaireClaire;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    color: $complementaireClaire;
+    margin: 6em 0 8em 0;
+    &:hover {
+      // transition-duration: 1s;
+      // color: $complementaire;
+      // border: 3px solid $complementaire;
+      transition: 0.7s;
+      opacity: 1.5;
+      text-decoration: none;
+    }
+  }
 }
 
 #navigation {
@@ -70,6 +97,7 @@ footer {
     color: $dominanteClaire;
     &:hover {
       color: $white;
+      transition: 1s;
     }
   }
 }
@@ -106,26 +134,30 @@ footer {
 
     .portfolio_card {
       background-color: white;
-      height: 350px;
-      width: 400px;
+      height: 400px;
+      width: 500px;
       border-radius: 15px;
       margin: 40px 0;
-      box-shadow: 0 0 6px gray;
-      img{
+      box-shadow: 0 0 10px $gris;
+      img {
         opacity: 0.4;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
       }
       .portfolio_card_infos {
         padding: 15px;
+        background-color: $dominante;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
         h4 {
           font-size: 1em;
           font-weight: bold;
-          color: $complementaire;
+          color: $complementaireClaire;
         }
         p {
           font-size: 0.8em;
-          color: $noir;
+          color: $white;
         }
       }
     }
@@ -158,7 +190,11 @@ footer {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  color: $white;
+  color: $complementaire;
+  font-size: 18px;
+  img {
+    margin: 0.5em;
+  }
 }
 
 .btn-contact {
@@ -168,6 +204,35 @@ footer {
   border-radius: 4px;
   &:hover {
     color: $white;
-
   }
 }
+.card_strip {
+  margin: 3em 0;
+  padding-bottom: 3em;
+  border-bottom: 1px solid rgba(10, 3, 130,0.7);
+}
+.image-card {
+  width: 200px;
+  height: 300px;
+  // background-image: linear-gradient(rgba(212, 206, 191,0.6), rgba(212, 206, 191,0.9)), url('petme.jpg');
+  // background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url('petme.jpg');
+
+  border-radius: 5px;
+}
+.content-card {
+  h2 {
+    color: $dominante;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 1.1px;
+  }
+  p {
+    color: $noir;
+  }
+  margin-left: 3em;
+  padding-top: 3em;
+  .icons img {
+    margin: 0 1em;
+  }
+}
+

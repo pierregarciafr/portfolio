@@ -1,14 +1,59 @@
 <section id="portfolio">
-      <div class="container">
-        <h1>Portfolio</h1>
+  <div class="container">
+    <h1>Portfolio</h1>
 
-          <div id="cards_section">
-            <% card = {link: "staticpages.jpg", title: 'Static-pages', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
- %>
-            <%= render 'card',  %>
-            <%#= render 'card' %>
-            <%#= render 'card' %>
-            <%#= render 'card' %>
+      <div id="cards_section">
+
+        <div class="card_strip">
+          <div class="row">
+            <div class="col-3">
+              <%= link_to "https://pet-me-please.herokuapp.com/", target: 'blank' do %>
+                <div class="image-card" style="background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url(<%= image_path('staticpages.jpg') %>)">
+                </div>
+              <% end %>
+            </div>
+            <div class="col-9">
+              <div class="content-card">
+                <h2>Messagerie</h2>
+                <p>Création d’une messagerie clone de Twitter d’après le cours de Michael Hart. L’inscription, l'authentification et l’identification des utilisateurs sont codés <em>from scratch</em> et reproduisent le comportement de Devise. Chaque utilisateur peut envoyer des microposts avec texte et image, et choisir de suivre d'autres utilisateurs.
+                      <div class="icons">
+                  <%= image_tag('iconsNew/HTML.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/CSS.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/JS.svg', width: '50')  %>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div class="card_strip">
+          <div class="row">
+            <div class="col-3">
+              <%= link_to "https://pet-me-please.herokuapp.com/", target: 'blank' do %>
+                <div class="image-card" style="background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url(<%= image_path('petme.jpg') %>)">
+                </div>
+              <% end %>
+            </div>
+            <div class="col-9">
+              <div class="content-card">
+                <h2>Marketplace</h2>
+                <p>Création d’une messagerie clone de Twitter d’après le cours de Michael Hart. L’inscription, l'authentification et l’identification des utilisateurs sont codés <em>from scratch</em> et reproduisent le comportement de Devise. Chaque utilisateur peut envoyer des microposts avec texte et image, et choisir de suivre d'autres utilisateurs.
+                      <div class="icons">
+                  <%= image_tag('iconsNew/HTML.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/CSS.svg', width: '50')  %>
+                  <%= image_tag('iconsNew/JS.svg', width: '50')  %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <%# card = {link: "staticpages.jpg", title: 'Guesswhat', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+%>
+        <%#= render 'card',  card %>
+        <%#= render 'card',  card %>
+        <%#= render 'card',  card %>
+
       </div>
+  </div>
 </section>
