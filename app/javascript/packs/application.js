@@ -15,3 +15,36 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+const padClicked = (e) => {
+
+        console.log(e.target);
+
+      }
+function pulse(e) {
+  this.animate({
+    transition: 'all 1s ease-in-out',
+    transform:  'scale(0.05,1)'
+  }, 1500, function() {
+    this.animate({
+      transition: 'all 1s ease-in-out',
+      transform:  'scale(1,1)'
+      }, 1500, function() {
+        pulse();
+    });
+  });
+}
+
+const pivotCard = () => {
+  padElts = document.querySelectorAll('#bio .biocard');
+
+  padElts.forEach( padElt => {
+      padElt.addEventListener('click', pulse);
+      }
+  );
+}
+
+
+document.addEventListener('turbolinks:load', () => {
+  pivotCard();
+
+});
