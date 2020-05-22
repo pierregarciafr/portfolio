@@ -242,21 +242,83 @@ footer {
   }
 }
 #bio {
+  p {
+    padding: 3em 0;
+  }
   .col-4 {
     padding: 0;
   }
 }
-.biocard {
+
+.bio-card {
+  cursor: pointer;
   width: 100%;
-  // border: 2px solid yellow;
-  border-radius: 20px;
-  // background-position: center center;
-  // background-attachment: fixed;
-  background-size: cover;
+  position: relative;
+  .front {
+    border-radius: 20px;
+  }
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+  }
+  .front {
+    transform: perspective(600px) rotateY(0deg);
+    background-size: cover;
+  }
+  .back {
+    background-color: rgba(255, 255, 255, 0.35);
+    transform: perspective(600px) rotateY(180deg);
+    border-radius: 20px;
+  }
 }
-.biocard:after {
-  content: '';
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 8%;
+  background: none;
+}
+
+.bio-card:after {
+  content: "";
   display: block;
   padding-bottom: 100%;
+}
+.back-content {
+  text-align: center;
+  width: 100%;
+  h2 {
+    color: $dominante;
+    font-weight: bold;
+  }
+  span {
+    color: $noir;
+  }
+  .sm a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+  .sm a:hover {
+    background: yellow;
+    color: white;
+    border-radius: 50%;
+  }
+
+}
+.bio-card:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.bio-card:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
 }
 
