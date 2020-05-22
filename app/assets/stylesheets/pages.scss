@@ -4,7 +4,7 @@
 
 
 $dominante: #0A0382; // RGB 10 3 130
-$dominanteClaire: #39479C;
+$dominanteClaire: #39479C; // RGB 57 71 156
 $complementaire: #a99c7f; // RGB 169 156 127
 $complementaireClaire: #d4cebf; // RGB 212 206 191
 $complementaireGris: #E3E0D9;
@@ -93,11 +93,16 @@ footer {
   box-shadow: 0 0 1em rgba(0,0,0,0.75);
   padding: 0 2em;
   .nav-link {
+    margin: 0 1em;
     color: rgba(255, 255, 255, 0.75);
     &:hover {
       color: $white;
       transition: 1s;
     }
+  }
+  .nav-link:before {
+    content: '\\  ';
+    color: $complementaireClaire;
   }
 }
 
@@ -106,6 +111,40 @@ footer {
   background-attachment: fixed;
   background-size: cover;
   color: $white;
+  .skills_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+    .skill_card {
+      display: flex;
+      padding: 1em 0 0.5em 0em;
+      img {
+        margin-right: 1em;
+       }
+      .text_container {
+        display: inline-block;
+        height: 100%;
+        span {
+          display: block;
+          float: right;
+          margin-left: 1em;
+          font-weight: lighter;
+        }
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      }
+    }
+  }
+  @media(max-width: 992px) {
+    .skills_cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media(max-width: 768px) {
+    .skills_cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
   table {
     margin-top: 3.5em;
   }
@@ -192,7 +231,7 @@ footer {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  color: $complementaire;
+  color: $complementaireClaire;
   font-size: 18px;
   img {
     margin: 0.5em;
