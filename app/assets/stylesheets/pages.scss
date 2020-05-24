@@ -39,6 +39,9 @@ section {
   h1 {
   margin-bottom: 50px;
   }
+  p {
+    margin-bottom: 80px;
+  }
 }
 .container {
   // width: 960px;
@@ -66,9 +69,10 @@ footer {
   background-attachment: fixed;
   background-size: cover;
   color: $white;
+  h1 {
 
+  }
   p {
-    padding: 2em 0 5em 0;
     font-weight: 200;
   }
   .button {
@@ -116,39 +120,38 @@ footer {
   background-attachment: fixed;
   background-size: cover;
   color: $white;
+  height: inherit;
   .skills_cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 100px);
+    justify-content: start;
     grid-gap: 1em;
+
     .skill_card {
-      display: flex;
-      padding: 1em 0 0.5em 0em;
+      width: 100px;
+      height: 130px;
+      padding: 15px 10px;
+      // background: rgba(255, 255, 255, 0.3);
+      // border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(10, 3, 130, 0.5);
+
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: stretch;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+
       img {
-        margin-right: 1em;
+        margin: 0 auto;
        }
       .text_container {
         display: inline-block;
-        height: 100%;
-        span {
-          display: block;
-          float: right;
-          margin-left: 1em;
-          font-weight: lighter;
-        }
-      border-bottom: 1px solid rgba(255,255,255,0.4);
+
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 100;
       }
     }
   }
-  // @media(max-width: 992px) {
-  //   .skills_cards {
-  //     grid-template-columns: 1fr 1fr 1fr;
-  //   }
-  // }
-  // @media(max-width: 768px) {
-  //   .skills_cards {
-  //     grid-template-columns: 1fr 1fr;
-  //   }
-  // }
 
   table {
     margin-top: 3.5em;
