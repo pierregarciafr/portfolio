@@ -275,6 +275,12 @@ footer {
   background-color: $complementaireClaire;
   color: $white;
   height: inherit;
+  p {
+    // padding: 3em 0;
+  }
+  .col-4 { // en attendant de faire la bio au grid
+    padding: 5px;
+  }
 }
 
 #contact{
@@ -358,14 +364,7 @@ footer {
     }
   }
 }
-#bio {
-  p {
-    padding: 3em 0;
-  }
-  .col-4 {
-    padding: 0;
-  }
-}
+
 
 .bio-card {
   cursor: pointer;
@@ -407,6 +406,7 @@ footer {
   display: block;
   padding-bottom: 100%;
 }
+
 .back-content {
   text-align: center;
   width: 100%;
