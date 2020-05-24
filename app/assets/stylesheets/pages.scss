@@ -139,16 +139,16 @@ footer {
       }
     }
   }
-  @media(max-width: 992px) {
-    .skills_cards {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-  @media(max-width: 768px) {
-    .skills_cards {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
+  // @media(max-width: 992px) {
+  //   .skills_cards {
+  //     grid-template-columns: 1fr 1fr 1fr;
+  //   }
+  // }
+  // @media(max-width: 768px) {
+  //   .skills_cards {
+  //     grid-template-columns: 1fr 1fr;
+  //   }
+  // }
 
   table {
     margin-top: 3.5em;
@@ -167,54 +167,14 @@ footer {
   color: $dominante;
   height: inherit;
   #cards_section {
-    // background-color: red;
     width: 100%;
     height: inherit;
-
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-content: start;
-    // justify-content: center;
-    // // align-items: center;
-
-    .portfolio_card { // possibilité non exploitée
-      background-color: white;
-      height: 400px;
-      width: 500px;
-      border-radius: 15px;
-      margin: 40px 0;
-      box-shadow: 0 0 10px $gris;
-      img {
-        opacity: 0.4;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-      }
-      .portfolio_card_infos {
-        padding: 15px;
-        background-color: $dominante;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-
-        h4 {
-          font-size: 1em;
-          font-weight: bold;
-          color: $complementaireClaire;
-        }
-        p {
-          font-size: 0.8em;
-          color: $white;
-        }
-      }
-    }
-    .wrapper {
-      display: grid;
-      width: 100%;
-      grid-template-columns: repeat(auto-fill, 510px);
-      justify-content: space-around;
-
-      grid-row-gap: 80px;
-    }
-    .wcard {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 510px);
+    justify-content: space-around;
+    grid-row-gap: 80px;
+    .portfolio_card {
       width: 510px;
       height: 340px;
       border-radius: 15px;
@@ -306,8 +266,6 @@ footer {
 }
 
 #bio{
-  // background-image: linear-gradient(rgba(144, 133, 214,0.55), rgba(144, 133, 214,0.95)),url('bannerH.jpg');
-
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -317,18 +275,15 @@ footer {
 }
 
 #contact{
-
   background-color: $complementaireClaire;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-
   background-color: $complementaireClaire;
   color: $white;
 }
 
 #footer{
-  // background-image: linear-gradient(rgba(49, 56, 62,0.55), rgba(49, 56, 62,0.95)),url('bannerH.jpg');
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -376,8 +331,6 @@ footer {
 .image_card {
   width: 200px;
   height: 300px;
-  // background-image: linear-gradient(rgba(212, 206, 191,0.6), rgba(212, 206, 191,0.9)), url('petme.jpg');
-  // background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url('petme.jpg');
   margin: 0 auto;
   border-radius: 5px;
 }
