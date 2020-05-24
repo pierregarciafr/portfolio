@@ -39,6 +39,9 @@ section {
   h1 {
   margin-bottom: 50px;
   }
+  p {
+    margin-bottom: 80px;
+  }
 }
 .container {
   // width: 960px;
@@ -58,7 +61,12 @@ footer {
   height: auto;
   width: 100%;
   .container {
-    padding: 5em 0;
+    padding: 3em 0;
+    p {
+      font-size: 0.8rem;
+      line-height: 1.3rem;
+      margin: 0;
+    }
   }
 }
 #banner{
@@ -66,9 +74,10 @@ footer {
   background-attachment: fixed;
   background-size: cover;
   color: $white;
+  h1 {
 
+  }
   p {
-    padding: 2em 0 5em 0;
     font-weight: 200;
   }
   .button {
@@ -97,6 +106,9 @@ footer {
   height: 75px;
   box-shadow: 0 0 1em rgba(0,0,0,0.75);
   padding: 0 2em;
+  .navbar-brand {
+    color: $white;
+  }
   .nav-link {
     margin: 0 1em;
     color: rgba(255, 255, 255, 0.75);
@@ -116,37 +128,36 @@ footer {
   background-attachment: fixed;
   background-size: cover;
   color: $white;
+  height: inherit;
   .skills_cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 100px);
+    justify-content: start;
     grid-gap: 1em;
+
     .skill_card {
-      display: flex;
-      padding: 1em 0 0.5em 0em;
+      width: 100px;
+      height: 130px;
+      padding: 15px 10px;
+      // background: rgba(255, 255, 255, 0.3);
+      // border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(10, 3, 130, 0.5);
+
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: stretch;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+
       img {
-        margin-right: 1em;
+        margin: 0 auto;
        }
       .text_container {
         display: inline-block;
-        height: 100%;
-        span {
-          display: block;
-          float: right;
-          margin-left: 1em;
-          font-weight: lighter;
-        }
-      border-bottom: 1px solid rgba(255,255,255,0.4);
+
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 100;
       }
-    }
-  }
-  @media(max-width: 992px) {
-    .skills_cards {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-  @media(max-width: 768px) {
-    .skills_cards {
-      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -167,54 +178,14 @@ footer {
   color: $dominante;
   height: inherit;
   #cards_section {
-    // background-color: red;
     width: 100%;
     height: inherit;
-
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-content: start;
-    // justify-content: center;
-    // // align-items: center;
-
-    .portfolio_card { // possibilité non exploitée
-      background-color: white;
-      height: 400px;
-      width: 500px;
-      border-radius: 15px;
-      margin: 40px 0;
-      box-shadow: 0 0 10px $gris;
-      img {
-        opacity: 0.4;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-      }
-      .portfolio_card_infos {
-        padding: 15px;
-        background-color: $dominante;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-
-        h4 {
-          font-size: 1em;
-          font-weight: bold;
-          color: $complementaireClaire;
-        }
-        p {
-          font-size: 0.8em;
-          color: $white;
-        }
-      }
-    }
-    .wrapper {
-      display: grid;
-      width: 100%;
-      grid-template-columns: repeat(auto-fill, 510px);
-      justify-content: space-around;
-
-      grid-row-gap: 80px;
-    }
-    .wcard {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 510px);
+    justify-content: space-around;
+    grid-row-gap: 80px;
+    .portfolio_card {
       width: 510px;
       height: 340px;
       border-radius: 15px;
@@ -306,29 +277,30 @@ footer {
 }
 
 #bio{
-  // background-image: linear-gradient(rgba(144, 133, 214,0.55), rgba(144, 133, 214,0.95)),url('bannerH.jpg');
-
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   background-color: $complementaireClaire;
   color: $white;
   height: inherit;
+  p {
+    // padding: 3em 0;
+  }
+  .col-4 { // en attendant de faire la bio au grid
+    padding: 5px;
+  }
 }
 
 #contact{
-
   background-color: $complementaireClaire;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-
   background-color: $complementaireClaire;
   color: $white;
 }
 
 #footer{
-  // background-image: linear-gradient(rgba(49, 56, 62,0.55), rgba(49, 56, 62,0.95)),url('bannerH.jpg');
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -376,8 +348,6 @@ footer {
 .image_card {
   width: 200px;
   height: 300px;
-  // background-image: linear-gradient(rgba(212, 206, 191,0.6), rgba(212, 206, 191,0.9)), url('petme.jpg');
-  // background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url('petme.jpg');
   margin: 0 auto;
   border-radius: 5px;
 }
@@ -402,16 +372,9 @@ footer {
     }
   }
 }
-#bio {
-  p {
-    padding: 3em 0;
-  }
-  .col-4 {
-    padding: 0;
-  }
-}
 
-.bio-card {
+
+.bio_card {
   cursor: pointer;
   width: 100%;
   position: relative;
@@ -446,7 +409,7 @@ footer {
   background: none;
 }
 
-.bio-card:after {
+.bio_card:after {
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -462,6 +425,7 @@ footer {
     color: $noir;
   }
   .sm a {
+    color: $noir;
     display: inline-flex;
     width: 40px;
     height: 40px;
@@ -470,16 +434,16 @@ footer {
     transition: 0.4s;
   }
   .sm a:hover {
-    background: yellow;
+    background: $complementaire;
     color: white;
     border-radius: 50%;
   }
 
 }
-.bio-card:hover > .front {
+.bio_card:hover > .front {
   transform: perspective(600px) rotateY(-180deg);
 }
-.bio-card:hover > .back {
+.bio_card:hover > .back {
   transform: perspective(600px) rotateY(0deg);
 }
 

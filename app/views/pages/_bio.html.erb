@@ -1,24 +1,34 @@
-<section id="bio" style="background-image: linear-gradient(rgba(212, 206, 191, 0.95), rgba(212, 206, 191, 0.9)), url(<%= image_path ('banner.jpg') %>)">
+<section id="bio" style="background-image: linear-gradient(rgba(10, 3, 130,0.25), rgba(10, 3, 130, 0.85)), url(<%= image_path ('banner.jpg') %>)">
   <div class="container">
+    <% bioElt = {
+            netflix: { title: 'Assistant costumier', content: 'Texte Netflix', link: 'padNetflix.svg'},
+            mar: { title: 'Costumier designer', content: 'Texte MAR', link: 'padMar.svg'},
+            RBI: { title: 'Façade designer', content: 'Texte RBI', link: 'padRBI.svg'},
+            Nanterre: { title: 'Scénographe', content: 'Texte Nanterre', link: 'padNanterre.svg'},
+            Hermes: { title: 'Chargé de production', content: 'Texte Hermes', link: 'padHermes.svg'},
+            Colline: { title: 'Scénographe & Costumier', content: 'Texte Colline', link: 'padColline.svg'},
+            Harrods: { title: 'Scénographe', content: 'Texte Harrods', link: 'padHarrods.svg'},
+            Colombier: { title: 'Scénographe', content: 'Texte Colombier', link: 'padColombier.svg'}
+     } %>
     <h1>Bio</h1>
     <p>Riche d’un parcours dans les arts-appliqués, j’ai professionnalisé mes compétences en développement web. Je souhaite mettre à profit de nombreuses skills acquises dans la conception de produits et de solutions sur-mesure : adaptabilité à l’exigence client, gestion d’équipe hyper réactive, méthodes orientées résultat, autonomie et exigence qualitative, qui s’apparentent au mode de travail agile.</p>
     <div class="row">
-      <div class="col-4"><%= render 'bio_card', link: 'padNetflix.svg'  %></div>
-      <div class="col-4"><%= render 'bio_card', link: 'padMar.svg'  %></div>
-      <div class="col-4"><%= render 'bio_card', link: 'padRBI.svg'  %></div>
+      <div class="col-4"><%= render 'bio_card', bioElt[:netflix]  %></div>
+
+      <div class="col-4"><%= render 'bio_card', bioElt[:mar]  %></div>
+      <div class="col-4"><%= render 'bio_card', bioElt[:RBI]  %></div>
     </div>
 
     <div class="row">
-      <div class="col-4"><%= render 'bio_card', link: 'padNanterre.svg'  %></div>
-      <div class="col-4"><%= render 'bio_card', link: 'padHermes.svg'  %></div>
-      <div class="col-4"><%= render 'bio_card', link: 'padColline.svg'  %></div>
+      <div class="col-4"><%= render 'bio_card', bioElt[:Nanterre]  %></div>
+      <div class="col-4"><%= render 'bio_card', bioElt[:Hermes]  %></div>
+      <div class="col-4"><%= render 'bio_card', bioElt[:Colline]  %></div>
     </div>
 
     <div class="row">
-      <div class="col-4"><%= render 'bio_card', link: 'padHarrods.svg'  %></div>
-      <div class="col-4"><%= render 'bio_card', link: 'padColombier.svg'  %></div>
-      <!--<div class="col-4"><%= render 'bio_card', link: 'padNetflix.svg'  %></div>-->
-    </div>
+      <div class="col-4"><%= render 'bio_card', bioElt[:Harrods]  %></div>
+      <div class="col-4"><%= render 'bio_card', bioElt[:Colombier]  %></div>
+  </div>
 
   </div>
 </section>
