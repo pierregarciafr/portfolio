@@ -61,7 +61,12 @@ footer {
   height: auto;
   width: 100%;
   .container {
-    padding: 5em 0;
+    padding: 3em 0;
+    p {
+      font-size: 0.8rem;
+      line-height: 1.3rem;
+      margin: 0;
+    }
   }
 }
 #banner{
@@ -101,6 +106,9 @@ footer {
   height: 75px;
   box-shadow: 0 0 1em rgba(0,0,0,0.75);
   padding: 0 2em;
+  .navbar-brand {
+    color: $white;
+  }
   .nav-link {
     margin: 0 1em;
     color: rgba(255, 255, 255, 0.75);

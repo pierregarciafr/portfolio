@@ -3,32 +3,37 @@
     <div class="row">
 
       <div class="col-4">
-        <p>Paris</p>
-        <p>+33 616 727 481</p>
-        <p>pierrebgarciad@gmail.com</p>
-      </div>
+<!--         <p><%#= image_tag('iconsNew/geo.svg', width: 20) %>Paris / Stade-de-France</p>
+  -->     </div>
 
       <div class="col-4">
         <div class="text-center">
-          <%= link_to "#" , width: 35 do %>
-          <%= image_tag 'iconsNew/github.svg', width: 35 %>
-          <% end %>
-          <%= link_to "#" , width: 35 do %>
-          <%= image_tag 'iconsNew/linkedin1.svg', width: 35 %>
-          <% end %>
-          <%= link_to "#" , width: 35 do %>
-          <%= image_tag 'iconsNew/instagram2.svg', width: 35 %>
-          <% end %>
+          <p>© Pierre Garcia - Droits réservés 2020.</p>
         </div>
         <div class="text-center">
-          <p>© Pierre Garcia</p>
-          <p>Droits réservés 2020.</p>
+          <p><%= image_tag('iconsNew/telephone.svg', width: 12) %>+33 616 727 481</p>
+          <p><%= image_tag('iconsNew/mail.svg', width: 15) %>pierrebgarciad@gmail.com</p>
         </div>
+
+       <div class="text-center">
+          <%= link_to "#" , width: 35 do %>
+          <%= image_tag 'iconsNew/github.svg', width: 25 %>
+          <% end %>
+          <%= link_to "#" , width: 35 do %>
+          <%= image_tag 'iconsNew/linkedin1.svg', width: 25 %>
+          <% end %>
+          <%= link_to "#" , width: 35 do %>
+          <%= image_tag 'iconsNew/instagram2.svg', width: 25 %>
+          <% end %>
+        </div>
+
       </div>
 
-      <div class="col-4">
-        <p>Mentions légales</p>
-        <p>Plan du site</p>
+      <div class="col-4" >
+        <div class="text-right">
+          <p>Mentions légales</p>
+          <p>Plan du site</p>
+        </div>
       </div>
 
     </div>
