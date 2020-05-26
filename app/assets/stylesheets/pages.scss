@@ -141,9 +141,7 @@ footer {
       width: 100px;
       height: 130px;
       padding: 15px 10px;
-      // background: rgba(255, 255, 255, 0.3);
-      // border: 1px solid rgba(255, 255, 255, 0.3);
-        background: rgba(10, 3, 130, 0.5);
+      background: rgba(10, 3, 130, 0.5);
 
       display: grid;
       grid-template-columns: 1fr;
@@ -154,8 +152,9 @@ footer {
         margin: 0 auto;
        }
       .text_container {
-        display: inline-block;
 
+        display: inline-block;
+        vertical-align: bottom;
         text-align: center;
         font-size: 1rem;
         font-weight: 100;
@@ -186,6 +185,7 @@ footer {
     width: 100%;
     grid-template-columns: repeat(auto-fill, 510px);
     justify-content: space-around;
+    grid-column-gap: 40px;
     grid-row-gap: 80px;
     .portfolio_card {
       width: 510px;
@@ -405,7 +405,7 @@ footer {
   }
 
   .back {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.85);
     transform: perspective(600px) rotateY(180deg);
     border-radius: 20px;
   }
