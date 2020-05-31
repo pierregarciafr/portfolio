@@ -1,24 +1,19 @@
 <!-- obsolete / inutilisé -->
-<div class="card_strip">
-  <div class="row">
-    <div class="col-3">
-      <%= link_to "https://www.guesswhat.live", target: 'blank' do %>
-        <div class="image-card" style="background-image: linear-gradient(rgba(10, 3, 130,0.2), rgba(10, 3, 130,0.5)), url(<%= image_path('thumbGuesswhat.jpg') %>)">
-        </div>
-      <% end %>
-    </div>
-    <div class="col-9">
-      <div class="content-card">
-        <h2>Blind test musical</h2>
-        <p>Ce jeu à reconnaissance vocale permet à l'utilisateur d'inviter d'autres joueurs, et jouer depuis chacun depuis son smartphone.
-          Le MVP a été réalisé lors d'un sprint de 10 jours au Wagon, en équipe de 4. Nous avons utilisé les technologies ActionCable et API Rest.
-        </p>
-        <div class="icons">
-          <%= image_tag('iconsNew/HTML2.svg', width: '50')  %>
-          <%= image_tag('iconsNew/CSS2.svg', width: '50')  %>
-          <%= image_tag('iconsNew/JS2.svg', width: '50')  %>
-        </div>
+<div class="portfolio_card">
+    <%= image_tag(project[:image], class:"screenshot") %>
+    <div class="info">
+    <h1>
+      <%= project[:title] %>
+    </h1>
+    <p><%= project[:paragraph] %></p>
+      <div class="icons">
+        <% project[:icons].each do |icon| %>
+        <%= image_tag("iconsNew/#{icon}.svg", width: '40')  %>
+        <% end %>
       </div>
-    </div>
+    <%= link_to project[:link], target: 'blank', class: 'button' do %>
+    to Website
+    <% end %>
+
   </div>
 </div>
