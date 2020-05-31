@@ -6,6 +6,11 @@ class SkillTest < ActiveSupport::TestCase
     @skill = Skill.new(iconName: 'icon.svg', text: 'text')
   end
 
+  test "should not save skill with empty fields" do
+    skill = Skill.new
+    assert_not skill.save, "Save the skill without a field"
+  end
+
   test "new instance should have iconName" do
     @skill.iconName = ''
     assert_not @skill.valid?
@@ -25,9 +30,4 @@ class SkillTest < ActiveSupport::TestCase
     @skill.text = 'a' * 20
     assert_not @skill.valid?
   end
-
-
-  # test "the truth" do
-  #   assert true
-  # end
 end
