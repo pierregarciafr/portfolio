@@ -1,6 +1,6 @@
 <section id="bio" style="background-image: linear-gradient(rgba(10, 3, 130,0.25), rgba(10, 3, 130, 0.85)), url(<%= image_path ('banner.jpg') %>)">
   <div class="container">
-    <% bioElt = {
+    <%# bioElt = {
             netflix: { title: 'Assistant-costumier', content: "Sur la série Netflix 3%, j’étais en charge, auprès du designer Cassio Brasil, de la conception de silhouettes, de la transformation de vêtements, et des essayages avec les acteurs.", link: 'padNetflix.svg'},
             mar: { title: 'Costumier designer', content: "J’ai créé les costumes pour le spectacle Zona de lançamento, produit et accueilli par le Museu de Arte do Rio de Janeiro.", link: 'padMar.svg'},
             RBI: { title: 'Façade designer', content: "J’étais chargé de la mise aux normes de la charte graphique des façades des 250 magasins du réseau worldwide.
@@ -14,17 +14,20 @@ J’ai proposé une méthode, réalisé les préconisations sur-mesure, et su
     <h1>Bio</h1>
     <p>Pendant 20 ans j'ai exercé comme designer d'espaces et de costumes. J'ai conçu et développé des projets pour des clients prestigieux, avec le souci d'une prestation sur-mesure et qualitative, touchant un large public. Voici quelques clients qui m'ont fait confiance.</p>
     <div class="bio_cards">
-      <%= render 'bio_card', bioElt[:netflix]  %>
+      <% @biographies.each do |bio| %>
 
-      <%= render 'bio_card', bioElt[:mar]  %>
-      <%= render 'bio_card', bioElt[:RBI]  %>
+        <%= render 'bio_card', { title: bio.title, content: bio.content, icon: bio.icon } %>
+      <% end %>
 
-      <%= render 'bio_card', bioElt[:Nanterre]  %>
-      <%= render 'bio_card', bioElt[:Hermes]  %>
-      <%= render 'bio_card', bioElt[:Colline]  %>
+      <%#= render 'bio_card', bioElt[:mar]  %>
+      <%#= render 'bio_card', bioElt[:RBI]  %>
 
-      <%= render 'bio_card', bioElt[:Harrods]  %>
-      <%= render 'bio_card', bioElt[:Colombier]  %>
+      <%#= render 'bio_card', bioElt[:Nanterre]  %>
+      <%#= render 'bio_card', bioElt[:Hermes]  %>
+      <%#= render 'bio_card', bioElt[:Colline]  %>
+
+      <%#= render 'bio_card', bioElt[:Harrods]  %>
+      <%#= render 'bio_card', bioElt[:Colombier]  %>
   </div>
 
   </div>
