@@ -8,23 +8,25 @@
 
 Skill.destroy_all
 Project.destroy_all
+Biography.destroy_all
 
 skills = [{ icon: 'rails', text: 'Ruby On Rails 6' },
-       { icon: 'HTML2', text: 'HTML'},
-       { icon: 'CSS2', text: 'CSS'},
-       { icon: 'JS2', text: 'Javascript ES6'},
-       { icon: 'SQL', text: 'SQL'},
-       { icon: 'github', text: 'Github'},
-       { icon: 'react', text: 'React'},
-       { icon: 'heroku', text: 'Heroku'},
-       { icon: 'postgresql', text: 'PostgreSQL'},
-       { icon: 'git', text: 'Git'},
-       { icon: 'ruby', text: 'Ruby'},
-       { icon: 'photoshop', text: 'Photoshop'},
-       { icon: 'illustrator', text: 'Illustrator'},
-       { icon: 'indesign', text: 'Indesign'},
-       { icon: 'figma', text: 'Figma'},
-       ]
+          { icon: 'HTML2', text: 'HTML' },
+          { icon: 'CSS2', text: 'CSS' },
+          { icon: 'JS2', text: 'Javascript ES6' },
+          { icon: 'SQL', text: 'SQL' },
+          { icon: 'github', text: 'Github' },
+          { icon: 'react', text: 'React' },
+          { icon: 'heroku', text: 'Heroku' },
+          { icon: 'postgresql', text: 'PostgreSQL' },
+          { icon: 'git', text: 'Git' },
+          { icon: 'ruby', text: 'Ruby' },
+          { icon: 'photoshop', text: 'Photoshop' },
+          { icon: 'illustrator', text: 'Illustrator' },
+          { icon: 'indesign', text: 'Indesign' },
+          { icon: 'figma', text: 'Figma' }
+         ]
+
 skills.each do |skill|
   # p "#{skill[:icon]}.svg"
   s = Skill.new(iconName: "#{skill[:icon]}.svg", text: skill[:text])
@@ -76,4 +78,24 @@ projects.each do |project|
                     link: project[:link]
                   )
   puts p.save ? "success for #{p}" : "failed #{p}"
+end
+
+biographies = [
+                { title: 'Assistant-costumier', content: "Sur la série Netflix 3%, j’étais en charge, auprès du designer Cassio Brasil, de la conception de silhouettes, de la transformation de vêtements, et des essayages avec les acteurs.", icon: 'padNetflix.svg' },
+                { title: 'Costumier designer', content: "J’ai créé les costumes pour le spectacle Zona de lançamento, produit et accueilli par le Museu de Arte do Rio de Janeiro.", icon: 'padMar.svg' },
+                { title: 'Façade designer', content: "J’étais chargé de la mise aux normes de la charte graphique des façades des 250 magasins du réseau worldwide.
+    J’ai proposé une méthode, réalisé les préconisations sur-mesure, et suivi leur bonne réalisation.", icon: 'padRBI.svg' },
+                { title: 'Scénographe', content: "J’ai conçu des scénographies et costumes pour divers théâtres nationaux : le Théâtre National de la Colline, Théâtre du Vieux-Colombier, Nanterre-Amandiers, Théâtre National de Bourgogne, Théâtre des Quartiers d’Ivry...", icon: 'padNanterre.svg' },
+                { title: 'Chargé de production', content: "Au sein de l'atelier Caraco, j’ai imaginé et mis en oeuvre des solutions uniques pour la réalisation d'éléments scénographiques des vitrines de Noël du flagship Hermès.", icon: 'padHermes.svg'},
+                { title: 'Scénographe', content: "J’ai conçu des scénographies et costumes pour divers théâtres nationaux : le Théâtre National de la Colline, Théâtre du Vieux-Colombier, Nanterre-Amandiers, Théâtre National de Bourgogne, Théâtre des Quartiers d’Ivry...", icon: 'padColline.svg' },
+                { title: 'Scénographe', content: "J’ai créé pour Roche-Bobois International, des vitrines au magasin Harrod’s, London.", icon: 'padHarrods.svg'},
+                { title: 'Scénographe', content: "J’ai conçu des scénographies et costumes pour divers théâtres nationaux : le Théâtre National de la Colline, Théâtre du Vieux-Colombier, Nanterre-Amandiers, Théâtre National de Bourgogne, Théâtre des Quartiers d’Ivry...", icon: 'padColombier.svg' }
+              ]
+
+biographies.each do |bio|
+  b = Biography.new( title: bio[:title],
+                     content: bio[:content],
+                     icon: bio[:icon]
+                     )
+  puts b.save ?  "success for #{b.title}" : "failed #{b.title}"
 end

@@ -1,13 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  image: MyString
-  title: MyString
-  paragraph: MyString
-  link: MyString
+  image: miniGuesswhat.jpg
+  title: Blind test musical
+  paragraph: Ce jeu à reconnaissance vocale permet à l'utilisateur d'inviter un autre joueur de se connecter à la partie. Chacun peut jouer depuis son propre smartphone.
+    Le MVP a été réalisé lors d'un sprint de 10 jours au Wagon, en équipe de 4. Nous avons utilisé les technologies ActionCable et API Rest.
+  icons: ['rails', 'HTML', 'CSS', 'JS']
+  link: https://www.guesswhat.live
 
 two:
-  image: MyString
-  title: MyString
-  paragraph: MyString
-  link: MyString
+  image: miniStaticpages.jpg
+  title: Messagerie
+  paragraph: Création d’une messagerie clone de Twitter d’après le cours de Michael Hart. L’inscription, l'authentification et l’identification des utilisateurs sont réalisés <em>from scratch</em> et reproduisent le comportement de Devise. Chaque utilisateur peut envoyer des microposts avec texte et image, et choisir de suivre d'autres utilisateurs.
+  icons: ['rails', 'HTML', 'CSS']
+  link: https://staticpages-pg.herokuapp.com/

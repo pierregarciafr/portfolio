@@ -1,13 +1,16 @@
 <div class="bio_card">
+      <%#= title %>
+      <%#= content %>
+      <%#= icon %>
 
-      <div class="front" style="background-image: url(<%= image_path(link) %>)">
+      <div class="front" style="background-image: url(<%= image_path(icon) %>)">
       </div>
       <div class="back">
         <div class="back-content middle">
           <h2><%= title  %></h2>
           <span><%= content %></span>
 
-<!--           <div class="sm">
+<!--      <div class="sm">
             <a href="#">X</a>
             <a href="#">X</a>
             <a href="#">X</a>
@@ -16,5 +19,6 @@
 
       </div>
     </div>
+
   </div>
 

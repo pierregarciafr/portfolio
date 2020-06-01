@@ -1,0 +1,12 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+netflix:
+  title: Assistant-costumier
+  content: Sur la série Netflix 3%, j’étais en charge, auprès du designer Cassio Brasil, de la conception de silhouettes, de la transformation de vêtements, et des essayages avec les acteurs.
+  icon: padNetflix.svg
+
+mar:
+  title: Costumier designer
+  content: J’ai créé les costumes pour le spectacle Zona de lançamento, produit et accueilli par le Museu de Arte do Rio de Janeiro.
+  icon: padMar.svg
+
