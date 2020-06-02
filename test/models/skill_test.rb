@@ -11,15 +11,15 @@ class SkillTest < ActiveSupport::TestCase
     assert_not skill.save, "Save the skill without a field"
   end
 
-  test "new instance should have iconName" do
-    @skill.iconName = ''
-    assert_not @skill.valid?
-  end
+  # test "new instance should have iconName" do
+  #   @skill.iconName = ''
+  #   assert_not @skill.valid?
+  # end
 
-  test "new instance should match .svg format" do
-    @skill.iconName = 'toto'
-    assert_not @skill.valid?
-  end
+  # test "new instance should match .svg format" do
+  #   @skill.iconName = 'toto'
+  #   assert_not @skill.valid?
+  # end
 
   test "new instance should have text" do
     @skill.text = ''
