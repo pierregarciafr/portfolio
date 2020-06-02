@@ -1,8 +1,16 @@
-<div class='skill_card'>
+<div>
+  <div class='skill_card'>
 
-    <%= image_tag "iconsNew/#{iconName}", width: 50 %>
-  <div class="text_container">
-    <%= text %>
+      <%= image_tag "iconsNew/#{iconName}", width: 50 %>
+    <div class="text_container">
+      <%= text %>
+    </div>
+
   </div>
+  <% if user_signed_in? %>
+    <div class="admin_alternatives">
+      <%= link_to 'MAJ', edit_skill_path(skill)%>
+      <%= link_to 'X', skill_path(skill), method: :delete %>
+    </div>
+  <% end %>
 </div>
-

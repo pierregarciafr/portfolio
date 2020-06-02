@@ -14,6 +14,8 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
@@ -61,6 +63,23 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "portfolio_production"
 
   config.action_mailer.perform_caching = false
+
+  # -----------COPIE de StaticPages
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  host = 'pierregarcia-portfolio.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  # ActionMailer::Base.smtp_settings = {
+  #   user_name: ENV['SENDGRID_USERNAME'],
+  #   password: ENV['SENDGRID_PASSWORD'],
+  #   domain: 'pierregarcia-portfolio.herokuapp.com', # 'heroku.com'
+  #   address: 'smtp.sendgrid.net',
+  #   port: 587, # 465,
+  #   authentication: :plain,
+  #   enable_starttls_auto: true
+  # }
+  # ---------- fin copie
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
