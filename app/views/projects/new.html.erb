@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-4">
+    </div>
+
+    <div class="col-4">
+
+      <h2>New project</h2>
+
+      <%= form_for @project do |f| %>
+        <div class="field">
+          <%= f.label :title %><br />
+          <%= f.text_field :title, autofocus: true, autocomplete: "Nom du projet" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :paragraph %><br />
+          <%= f.text_field :paragraph,  autofocus: true, autocomplete: "Description" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :link %><br />
+          <%= f.text_field :link, autofocus: true, autocomplete: "URL" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :bckgdimage, "Upload background picture" %><br />
+          <%= f.file_field :bckgdimage %>
+        </div>
+
+  <!--       <div class="field">
+          <%#= f.label :icon, "Upload skill icons" %><br />
+          <%#= f.file_field :icon, multiple: true %>
+        </div> -->
+
+        <div class="actions">
+          <%= f.submit "Send", method: :patch %>
+        </div>
+
+      <% end %>
+
+    </div>
+
+    <div class="col-4">
+    </div>
+  </div>
+</div>
