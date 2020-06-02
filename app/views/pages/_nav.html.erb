@@ -1,15 +1,18 @@
 
-    <nav id="navigation" class="navbar sticky-top navbar-expand-lg">
-      <a class="navbar-brand" href="#banner">\ PG /</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Skills<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
-          <a class="nav-item nav-link" href="#bio">Bio</a>
-          <a class="nav-item nav-link" href="#contact">Contact</a>
-        </div>
-      </div>
-    </nav>
+<nav id="navigation" class="navbar sticky-top navbar-expand-lg">
+  <a class="navbar-brand" href="#banner">\ PG /</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Skills<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
+      <a class="nav-item nav-link" href="#bio">Bio</a>
+      <a class="nav-item nav-link" href="#contact">Contact</a>
+      <% if user_signed_in? %>
+        <%= link_to 'Exit', destroy_user_session_path, method: :delete, class:"nav-item nav-link" %>
+      <% end %>
+    </div>
+  </div>
+</nav>
