@@ -11,17 +11,17 @@
       <%= form_for @project do |f| %>
         <div class="field">
           <%= f.label :title %><br />
-          <%= f.text_field :title, autofocus: true, autocomplete: "Nom du projet" %>
+          <%= f.text_field :title, autofocus: true, autocomplete: "Nom du projet", size:'30' %>
         </div>
 
         <div class="field">
           <%= f.label :paragraph %><br />
-          <%= f.text_field :paragraph,  autofocus: true, autocomplete: "Description" %>
+          <%= f.text_field :paragraph,  autofocus: true, autocomplete: "Description", size:'30x9', maxlength: 250 %>
         </div>
 
         <div class="field">
           <%= f.label :link %><br />
-          <%= f.text_field :link, autofocus: true, autocomplete: "URL" %>
+          <%= f.text_field :link, autofocus: true, autocomplete: "URL", size:'30' %>
         </div>
 
         <div class="field">

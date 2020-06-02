@@ -11,17 +11,17 @@
       <%= form_for @project do |f| %>
         <div class="field">
           <%= f.label :title %><br />
-          <%= f.text_field :title, autofocus: true %>
+          <%= f.text_field :title, autofocus: true, size:'30' %>
         </div>
 
         <div class="field">
           <%= f.label :paragraph %><br />
-          <%= f.text_field :paragraph,  autofocus: true %>
+          <%= f.text_area :paragraph, autofocus: true, size:'30x9', maxlength: 250 %>
         </div>
 
         <div class="field">
           <%= f.label :link %><br />
-          <%= f.text_field :link, autofocus: true %>
+          <%= f.text_field :link, autofocus: true, size:'30' %>
         </div>
 
         <div class="field">
