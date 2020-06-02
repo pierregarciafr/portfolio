@@ -24,6 +24,11 @@
           <%= f.label :activate %>
         </div>
 
+        <div class="field">
+          <%= f.label :icon, "Upload skill picture" %><br />
+          <%= f.file_field :icon %>
+        </div>
+
         <div class="actions">
           <%= f.submit "Send", method: :patch %>
         </div>

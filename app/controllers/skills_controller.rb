@@ -36,7 +36,7 @@ class SkillsController < ApplicationController
   private
 
   def skill_params
-    params.require(:skill).permit(:iconName, :text, :activate)
+    params.require(:skill).permit(:iconName, :text, :activate, :icon)
   end
 
 end

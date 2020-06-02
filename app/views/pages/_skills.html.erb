@@ -7,14 +7,16 @@
 à l’exigence client, gestion d’équipe hyper réactive, méthodes orientées résultat, autonomie et
 exigence qualitative.
 </p>
+    <% if user_signed_in? %>
+    <div class="admin-add">
+      <%= link_to 'Add a new skill', new_skill_path, class: 'admin_alternatives' %>
+    </div>
+    <% end %>
     <div class="skills_cards">
       <% @skills.each do |skill| %>
-        <%= render 'skill_card', skill: skill, iconName: skill.iconName, text: skill.text %>
+        <%= render 'skill_card', skill: skill, icon: skill.icon, iconName: skill.iconName, text: skill.text %>
       <% end %>
     </div>
-    <% if user_signed_in? %>
-      <%= link_to 'Add a new skill', new_skill_path, class: 'admin_alternatives' %>
-    <% end %>
 
   </div>
 </section>
