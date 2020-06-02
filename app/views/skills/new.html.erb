@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-4">
+    </div>
+
+    <div class="col-4">
+
+      <h2>New skill</h2>
+
+      <%= form_for @skill do |f| %>
+        <div class="field">
+          <%= f.label :iconName %><br />
+          <%= f.text_field :iconName, autofocus: true, autocomplete: "fileName.svg" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :text %><br />
+          <%= f.text_field :text,  autofocus: true, autocomplete: "description" %>
+        </div>
+
+        <div class="field">
+          <%= f.check_box :activate %>
+          <%= f.label :activate %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Send", method: :patch %>
+        </div>
+
+
+      <% end %>
+
+    </div>
+
+    <div class="col-4">
+    </div>
+  </div>
+</div>

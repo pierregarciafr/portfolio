@@ -8,9 +8,13 @@ à l’exigence client, gestion d’équipe hyper réactive, méthodes orien
 exigence qualitative.
 </p>
     <div class="skills_cards">
-       <% @skills.each do |skill| %>
-         <%= render 'skill_card', iconName: skill.iconName, text: skill.text %>
-       <% end %>
-     </div>
-   </div>
+      <% @skills.each do |skill| %>
+        <%= render 'skill_card', skill: skill, iconName: skill.iconName, text: skill.text %>
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <%= link_to 'Add a new skill', new_skill_path, class: 'admin_alternatives' %>
+    <% end %>
+
+  </div>
 </section>

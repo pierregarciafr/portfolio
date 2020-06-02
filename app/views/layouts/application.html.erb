@@ -14,10 +14,13 @@
 
 
   <body>
+    <%= render 'shared/flashes' %>
 <!--     <canvas id="c">
- -->    <%= yield %>
+ -->
+    <%= yield %>
 <!--      </canvas>
- -->    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script>
       var n = 105, speed = 0.05;
       var c = document.getElementById("c"),

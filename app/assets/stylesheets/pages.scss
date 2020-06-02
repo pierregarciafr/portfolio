@@ -148,6 +148,22 @@ footer {
     grid-template-columns: repeat(auto-fill, 100px);
     justify-content: start;
     grid-gap: 1em;
+    .admin_alternatives {
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      a {
+        padding: 1px 6px;
+        background-color: white;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        mix-blend-mode: screen;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
 
     .skill_card {
       width: 100px;
@@ -307,10 +323,16 @@ footer {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  color: $complementaireClaire;
-  font-size: 18px;
+  color: $complementaire;
+  font-size: 1em;
   img {
     margin: 0.5em;
+  }
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
