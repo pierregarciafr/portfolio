@@ -137,36 +137,41 @@ footer {
   }
 }
 
+.admin-add {
+  padding: 1em 0;
+}
+
+a.admin_alternatives {
+  margin-left: 1em;
+  padding: 1px 6px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  mix-blend-mode: screen;
+  &:hover {
+    text-decoration: none;
+  }
+}
+    .admin_options {
+      margin: 1em 0;
+      display: flex;
+      justify-content: end;
+    }
+
 #skills {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   color: $white;
   height: inherit;
-  .admin-add {
-    padding: 1em 0;}
-    a.admin_alternatives {
-      padding: 1px 6px;
-      background-color: white;
-      border-radius: 5px;
-      color: black;
-      font-weight: bold;
-      mix-blend-mode: screen;
-      &:hover {
-        text-decoration: none;
-      }
-    }
 
   .skills_cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, 100px);
     justify-content: start;
     grid-gap: 1em;
-    .admin_options {
-      margin: 1em 0;
-      display: flex;
-      justify-content: space-between;
-    }
+
     // .admin_alternatives {
     //   margin: 1em 0;
     //   display: flex;
