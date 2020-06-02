@@ -143,27 +143,46 @@ footer {
   background-size: cover;
   color: $white;
   height: inherit;
+  .admin-add {
+    padding: 1em 0;}
+    a.admin_alternatives {
+      padding: 1px 6px;
+      background-color: white;
+      border-radius: 5px;
+      color: black;
+      font-weight: bold;
+      mix-blend-mode: screen;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
   .skills_cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, 100px);
     justify-content: start;
     grid-gap: 1em;
-    .admin_alternatives {
-      margin: 10px 0;
+    .admin_options {
+      margin: 1em 0;
       display: flex;
       justify-content: space-between;
-      a {
-        padding: 1px 6px;
-        background-color: white;
-        border-radius: 5px;
-        color: black;
-        font-weight: bold;
-        mix-blend-mode: screen;
-        &:hover {
-          text-decoration: none;
-        }
-      }
     }
+    // .admin_alternatives {
+    //   margin: 1em 0;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   a {
+    //     padding: 1px 6px;
+    //     background-color: white;
+    //     border-radius: 5px;
+    //     color: black;
+    //     font-weight: bold;
+    //     mix-blend-mode: screen;
+    //     &:hover {
+    //       text-decoration: none;
+    //     }
+    //   }
+    // }
 
     .skill_card {
       width: 100px;

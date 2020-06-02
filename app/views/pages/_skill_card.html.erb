@@ -1,16 +1,19 @@
 <div>
   <div class='skill_card'>
-
-      <%= image_tag "iconsNew/#{iconName}", width: 50 %>
+    <% if skill.icon.attached? %>
+      <%= cl_image_tag icon.key, width: 50 %>
+    <% else %>
+      <%= cl_image_tag("v1591105148/portfolio/CSS", width: 50) %>
+    <% end %>
     <div class="text_container">
       <%= text %>
     </div>
 
   </div>
   <% if user_signed_in? %>
-    <div class="admin_alternatives">
-      <%= link_to 'MAJ', edit_skill_path(skill)%>
-      <%= link_to 'X', skill_path(skill), method: :delete %>
+    <div class="admin_options">
+      <%= link_to 'MAJ', edit_skill_path(skill), class:"admin_alternatives"%>
+      <%= link_to 'X', skill_path(skill), method: :delete, class:"admin_alternatives" %>
     </div>
   <% end %>
 </div>
