@@ -9,7 +9,7 @@
       </div>
     <% end %>
     <div class="bio_cards">
-      <% @biographies.each do |bio| %>
+      <% @bios.each do |bio| %>
         <%= render 'bio_card', { bio: bio, title: bio.title, content: bio.content, icon: bio.iconLink } %>
       <% end %>
     </div>
