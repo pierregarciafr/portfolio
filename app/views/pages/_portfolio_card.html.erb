@@ -1,26 +1,27 @@
 <div>
-<div class="portfolio_card">
-  <!-- https://res.cloudinary.com/droxurcle/image/upload/v1588792042/bccn7547v5oldanujh9pdhzqqdkc.jpg -->
-  <% if project.bckgdimage.attached? %>
-    <%= cl_image_tag project.bckgdimage.key, class:"screenshot" %>
-  <% else %>
-    <%= cl_image_tag("ob8vdi2ojyzt5vzqojyicedz9y3g", class:"screenshot") %>
-  <% end %>
-  <div class="info">
-    <h1>
-      <%= project[:title] %>
-    </h1>
-    <p><%= project[:paragraph] %></p>
-      <div class="icons">
-        <% project[:icons].each do |icon| %>
-        <%= image_tag("iconsNew/#{icon}.svg", width: '40')  %>
-        <% end %>
-      </div>
-    <%= link_to project[:link], target: 'blank', class: 'button' do %>
-    to Website
+  <div class="portfolio_card">
+    <!-- https://res.cloudinary.com/droxurcle/image/upload/v1588792042/bccn7547v5oldanujh9pdhzqqdkc.jpg -->
+    <% if project.bckgdimage.attached? %>
+      <%= cl_image_tag project.bckgdimage.key, class:"screenshot" %>
+    <% else %>
+      <%= cl_image_tag("ob8vdi2ojyzt5vzqojyicedz9y3g", class:"screenshot") %>
     <% end %>
+    <div class="info">
+      <h1>
+        <%= project[:title] %>
+      </h1>
+      <p><%= project[:paragraph] %></p>
+        <div class="icons">
+          <% project[:icons].each do |icon| %>
+          <%= image_tag("iconsNew/#{icon}.svg", width: '40')  %>
+          <% end %>
+        </div>
+      <%= link_to project[:link], target: 'blank', class: 'button' do %>
+      to Website
+      <% end %>
+    </div>
   </div>
-</div>
+
   <% if user_signed_in? %>
     <div class="admin_options">
       <%= link_to 'MAJ', edit_project_path(project), class:"admin_alternatives" %>

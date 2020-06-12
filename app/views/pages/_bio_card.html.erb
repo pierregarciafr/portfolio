@@ -1,3 +1,4 @@
+<div>
 <div class="bio_card">
       <div class="front" style="background-image: url(<%= image_path(icon) %>)">
       </div>
@@ -17,4 +18,11 @@
     </div>
 
   </div>
+    <% if user_signed_in? %>
+    <div class="admin_options">
+      <%= link_to 'MAJ', bios_edit_path(bio), class:"admin_alternatives" %>
+      <%= link_to 'X', bios_destroy_path(bio), method: :delete, class:"admin_alternatives" %>
+    </div>
+  <% end %>
+</div>
 

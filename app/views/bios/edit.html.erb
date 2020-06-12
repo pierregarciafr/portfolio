@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-4">
+    </div>
+
+    <div class="col-4">
+
+      <h2>New bio tile</h2>
+
+      <%= form_for @bio, url: :bio_update do |f| %>
+        <div class="field">
+          <%= f.label :title %><br />
+          <%= f.text_field :title, autofocus: true, size:'30' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :content %><br />
+          <%= f.text_area :content,  autofocus: true, size:'30x9', maxlength: 250 %>
+        </div>
+
+        <div class="field">
+          <%= f.label :iconLink %><br />
+          <%= f.text_field :iconLink, autofocus: true, size:'30' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :icon, "Upload background picture" %><br />
+          <%= f.file_field :icon %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Send", method: :patch %>
+        </div>
+
+      <% end %>
+
+    </div>
+
+    <div class="col-4">
+    </div>
+  </div>
+</div>

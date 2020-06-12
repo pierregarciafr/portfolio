@@ -3,9 +3,14 @@
     <h1>Bio</h1>
     <p>Pendant 20 ans j'ai exercé comme designer d'espaces et de costumes. J'ai conçu et développé des projets pour des clients prestigieux, avec le souci d'une prestation sur-mesure et qualitative, touchant un large public. Voici quelques clients qui m'ont fait confiance.</p>
 
+    <% if user_signed_in? %>
+      <div class="admin-add">
+        <%= link_to 'Add a new bio', bios_new_path, class: 'admin_alternatives' %>
+      </div>
+    <% end %>
     <div class="bio_cards">
       <% @biographies.each do |bio| %>
-        <%= render 'bio_card', { title: bio.title, content: bio.content, icon: bio.icon } %>
+        <%= render 'bio_card', { bio: bio, title: bio.title, content: bio.content, icon: bio.iconLink } %>
       <% end %>
     </div>
 
