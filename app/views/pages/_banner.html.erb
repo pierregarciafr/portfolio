@@ -1,9 +1,17 @@
 <section id="banner" style="background-image: linear-gradient(rgba(33, 10, 172,0.3), rgba(33, 10, 172,0.3)),url(<%= cl_image_path('w5siapdg7iguyb4agmd6noqg66tg') %>)">
   <div class="container">
-    <h1 style="color: #a99c7f">Pierre Garcia<br><span style="color:#FEFDED">
-    Développeur Fullstack</span></h1>
+    <h1 style="color: #a99c7f">Pierre Garcia<br>
+      <span style="color:#FEFDED">
+        Développeur Fullstack
+      </span>
+    </h1>
     <p>Développeur Junior familier du code depuis l'adolescence, je souhaite est intégrer une équipe à taille humaine, qui me permette d'évoluer en Back et Front, apporter mes connaissances, et consolider mes bonnes pratiques.</p>
-    <a class="button" href="mailto:pierrebgarciad@gmail.com?subject=Hello Pierre">Contact</a>
+    <% if !user_signed_in? %>
+      <a class="button" href="mailto:pierrebgarciad@gmail.com?subject=Hello Pierre">Contact</a>
+    <% end %>
     <%#= cl_image_tag("v1591105148/portfolio/CSS", width: 50) %>
+    <% if user_signed_in? %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'button' %>
+    <% end %>
   </div>
 </section>
