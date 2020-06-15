@@ -10,7 +10,7 @@
     <% end %>
     <div class="bio_cards">
       <% @bios.each do |bio| %>
-        <%= render 'bio_card', { bio: bio, title: bio.title, content: bio.content, iconLink: bio.iconLink } %>
+        <%= render 'bio_card', { bio: bio } %>
       <% end %>
     </div>
 
