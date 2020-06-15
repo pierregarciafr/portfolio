@@ -1,0 +1,28 @@
+<div>
+<div class="bio_card">
+      <div class="front" style="background-image: url(<%= image_path(iconLink) %>)">
+      </div>
+      <div class="back">
+        <div class="back-content middle">
+          <h2><%= title  %></h2>
+          <span><%= content %></span>
+
+<!--      <div class="sm">
+            <a href="#">X</a>
+            <a href="#">X</a>
+            <a href="#">X</a>
+            <a href="#">X</a>
+          </div> -->
+
+      </div>
+    </div>
+
+  </div>
+    <% if user_signed_in? %>
+    <div class="admin_options">
+      <%= link_to 'MAJ', bio_edit_path(bio), class:"admin_alternatives" %>
+      <%= link_to 'X', bios_destroy_path(bio), method: :delete, class:"admin_alternatives" %>
+    </div>
+  <% end %>
+</div>
+
