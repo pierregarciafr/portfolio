@@ -32,7 +32,7 @@ class BiosController < ApplicationController
   private
 
   def bio_params
-    params.require(:bio).permit(:title, :content, :icon, :iconLink)
+    params.require(:bio).permit(:title, :content, :icon) #, :iconCloud
   end
 
 end
