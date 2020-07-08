@@ -3,20 +3,13 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-$dominante: #0A0382; // RGB 10 3 130
-$dominanteClaire: #39479C; // RGB 57 71 156
-$complementaire: #a99c7f; // RGB 169 156 127
-$complementaireClaire: #d4cebf; // RGB 212 206 191
-$complementaireGris: #E3E0D9;
-$white: #FEFDED;
-$gris: #f2f2f2;
-$noir: #31383e;
+
 // $url: "https://www.pexels.com/photo/background-backlight-blur-color-262713/";
 $url: 'bannerH.jpg';
 
 html {
   box-sizing: border-box;
-  background-color: $gris;
+  background-color: var(--gris);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -37,7 +30,7 @@ html {
 // }
 
 body {
-  background-color: $white;
+  background-color: var(--white);
   width: 100%;
  //min-height: 100vh;
 }
@@ -80,65 +73,12 @@ footer {
       font-size: 0.8rem;
       line-height: 1.3rem;
       margin: 0;
-      color: $complementaire;
+      color: var(--complementaire);
     }
   }
 }
 
-#banner{
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  color: $white;
-  h1 {
 
-  }
-  p {
-    font-weight: 200;
-  }
-  .button {
-    opacity: 0.9;
-    background-color: $complementaire;
-    border: 1px solid $complementaire;
-    border-radius: 5px;
-    padding: 0.5em 1em;
-    color: $white;
-    margin: 6em 0 8em 0;
-    transition-property: opacity;
-    transition-duration: 0.5s;
-    transition-delay: 0.2s;
-    &:hover {
-      background-color: $complementaire;
-      border: 1px solid $complementaire;
-      opacity: 1;
-      text-decoration: none;
-    }
-  }
-}
-
-#navigation {
-  background-color: $dominante;
-  font-family: "Roboto", "Futura", Arial, sans-serif;
-  color: $white;
-  height: 75px;
-  box-shadow: 0 0 1em rgba(0,0,0,0.75);
-  padding: 0 2em;
-  .navbar-brand {
-    color: $white;
-  }
-  .nav-link {
-    margin: 0 1em;
-    color: rgba(255, 255, 255, 0.75);
-    &:hover {
-      color: $white;
-      transition-duration: 1s;
-    }
-  }
-  .nav-link:before {
-    content: '\\  ';
-    color: $complementaireClaire;
-  }
-}
 
 .admin-add {
   padding: 1em 0;
@@ -163,198 +103,24 @@ a.admin_alternatives {
   justify-content: end;
 }
 
-#skills {
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  color: $white;
-  height: inherit;
-
-  .skills_cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 100px);
-    justify-content: start;
-    grid-gap: 1em;
-
-    // .admin_alternatives {
-    //   margin: 1em 0;
-    //   display: flex;
-    //   justify-content: space-between;
-    //   a {
-    //     padding: 1px 6px;
-    //     background-color: white;
-    //     border-radius: 5px;
-    //     color: black;
-    //     font-weight: bold;
-    //     mix-blend-mode: screen;
-    //     &:hover {
-    //       text-decoration: none;
-    //     }
-    //   }
-    // }
-
-    .skill_card {
-      width: 100px;
-      height: 130px;
-      padding: 15px 10px;
-      background: rgba(10, 3, 130, 0.5);
-
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: stretch;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-
-      img {
-        margin: 0 auto;
-       }
-      .text_container {
-
-        display: inline-block;
-        vertical-align: bottom;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 100;
-      }
-    }
-  }
-
-  table {
-    margin-top: 3.5em;
-  }
-  td {
-    width: 200px;
-    height: 2em;
-    img {
-      margin: 10px 10px 10px 0;
-    }
-  }
-}
-
-#portfolio{ /* largeur pour le smartphone */
-  background-color: $gris;
-  color: $dominante;
-  height: inherit;
-  #cards_section {
-    width: 100%;
-    height: inherit;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fill, 510px);
-    justify-content: space-around;
-    grid-column-gap: 40px;
-    grid-row-gap: 80px;
-    .portfolio_card {
-      width: 510px;
-      height: 340px;
-      border-radius: 15px;
-      padding: 1.5rem;
-      background: white;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      transition: 0.4s ease-out;
-      box-shadow: 0px 7px 10px rgba(black, 0.5);
-      &:hover {
-        transform: translateY(20px);
-        &:before {
-          opacity: 1;
-        }
-        .info {
-          opacity: 1;
-          transform: translateY(0px);
-        }
-      }
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        background: linear-gradient(rgba(10, 3, 130,0.5), rgba(10, 3, 130,0.9));
-        z-index: 2;
-        transition: 0.5s;
-        opacity: 0;
-      }
-      img.screenshot {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 15px;
-      }
-      .info {
-        position: relative;
-        z-index: 3;
-        color: white;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: 0.5s;
-        h1 {
-          color: $complementaire;
-          margin: 0px;
-        }
-
-        p {
-          letter-spacing: 1px;
-          font-size: 15px;
-          margin-top: 8px;
-          margin-bottom: 24px;
-        }
-        .icons {
-          display: block;
-          float: right;
-          margin-bottom: 16px;
-          img {
-            margin-right: 1em;
-          }
-        }
-        .button {
-           opacity: 0.9;
-          background-color: $complementaire;
-          border: 1px solid $complementaire;
-          border-radius: 5px;
-          padding: 0.5em 1em;
-          color: $white;
-          margin: 6em 0 8em 0;
-          transition-property: opacity;
-          transition-duration: 0.5s;
-          transition-delay: 0.2s;
-
-          &:hover {
-            background-color: $complementaire;
-            border: 1px solid $complementaire;
-            opacity: 1;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media(max-width: 768px) {
   .container{ width: 95%; }
   .portfolio_card { width: 80%; }
 }
 #contact{
-  background-color: $complementaireClaire;
+  background-color: var(--complementaire-claire);
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  background-color: $complementaireClaire;
-  color: $white;
+  background-color: var(--complementaire-claire);
+  color: var(--white);
 }
 
 #footer{
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  color: $complementaire;
+  color: var(--complementaire);
   font-size: 1em;
   img {
     margin: 0.5em;
@@ -368,36 +134,12 @@ a.admin_alternatives {
 }
 
 .btn-contact {
-  color: $gris;
-  background-color: $complementaire;
-  border: 1px solid $complementaire;
+  color: var(--gris);
+  background-color: var(--complementaire);
+  border: 1px solid var(--complementaire);
   border-radius: 4px;
   &:hover {
-    color: $white;
-  }
-}
-
-.card_strip {
-  margin: 3em 0;
-  padding-bottom: 3em;
-  border-bottom: 1px solid rgba(10, 3, 130,0.7);
-  display: grid;
-  grid-template-columns: 400px 1fr;
-
-  grid-gap: 1em;
-  .portfolio_image {
-    grid-column: 1;
-  }
-  .portfolio_content {
-    grid-column: 2;
-  }
-}
-@media(max-width: 768px) {
-.card_strip {
-  grid-template-columns: 1fr;
-  }
-    .portfolio_content {
-    grid-column: 1;
+    color: var(--white);
   }
 }
 
@@ -410,13 +152,13 @@ a.admin_alternatives {
 
 .content-card {
   h2 {
-    color: $dominante;
+    color: var(--dominante);
     font-weight: bold;
     font-size: 1.5em;
     letter-spacing: 1.1px;
   }
   p {
-    color: $noir;
+    color: var(--noir);
   }
   margin-left: 3em;
   padding-top: 3em;
@@ -429,97 +171,4 @@ a.admin_alternatives {
   }
 }
 
-#bio{
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: $complementaireClaire;
-  color: $white;
-  height: inherit;
-  p {
-    // padding: 3em 0;
-  }
-  .col-4 { // en attendant de faire la bio au grid
-    padding: 5px;
-  }
-  .bio_cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-
-  }
-}
-
-.bio_card {
-  cursor: pointer;
-  width: 100%;
-  position: relative;
-
-
-  .front {
-    border-radius: 20px;
-    transform: perspective(600px) rotateY(0deg);
-    background-size: cover;
-  }
-  .front, .back {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    transition: transform .6s linear;
-  }
-
-  .back {
-    background-color: rgba(255, 255, 255, 0.85);
-    transform: perspective(600px) rotateY(180deg);
-    border-radius: 20px;
-  }
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 8%;
-  background: none;
-}
-
-.bio_card:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
-.back-content {
-  text-align: center;
-  width: 100%;
-  h2 {
-    color: $dominante;
-    font-weight: bold;
-  }
-  span {
-    color: $noir;
-  }
-  .sm a {
-    color: $noir;
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-  }
-  .sm a:hover {
-    background: $complementaire;
-    color: white;
-    border-radius: 50%;
-  }
-
-}
-.bio_card:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.bio_card:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
-}
 

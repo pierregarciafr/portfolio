@@ -1,0 +1,32 @@
+#banner{
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--white);
+  h1 {
+
+  }
+  p {
+    font-weight: 200;
+  }
+  .button {
+    opacity: 0.9;
+    background-color: var(--complementaire);
+    border: 1px solid var(--complementaire);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    color: var(--white);
+    margin: 6em 0 8em 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+    &:hover {
+      background-color: var(--complementaire);
+      border: 1px solid var(--complementaire);
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+}
+
+
