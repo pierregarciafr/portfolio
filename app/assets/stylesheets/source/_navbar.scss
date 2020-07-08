@@ -1,0 +1,23 @@
+#navigation {
+  background-color: var(--dominante);
+  font-family: "Roboto", "Futura", Arial, sans-serif;
+  color: var(--white);
+  height: 75px;
+  box-shadow: 0 0 1em rgba(0,0,0,0.75);
+  padding: 0 2em;
+  .navbar-brand {
+    color: var(--white);
+  }
+  .nav-link {
+    margin: 0 1em;
+    color: rgba(255, 255, 255, 0.75);
+    &:hover {
+      color: var(--white);
+      transition-duration: 1s;
+    }
+  }
+  .nav-link:before {
+    content: '\\  ';
+    color: var(--complementaire-claire);
+  }
+}
