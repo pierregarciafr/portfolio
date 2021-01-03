@@ -13,11 +13,11 @@
       <p><%= project[:paragraph] %></p>
         <div class="icons">
           <% project[:icons].each do |icon| %>
-          <%= image_tag("iconsNew/#{icon}.svg", width: '40')  %>
+            <%= image_tag("iconsNew/#{icon}.svg", width: '40')  %>
           <% end %>
         </div>
       <%= link_to project[:link], target: 'blank', class: 'button' do %>
-      to Website
+        to Website
       <% end %>
     </div>
   </div>

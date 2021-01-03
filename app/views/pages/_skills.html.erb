@@ -1,12 +1,7 @@
 <section id="skills" style="background-image: linear-gradient(rgba(10, 3, 130,0.25), rgba(10, 3, 130, 0.85)), url(<%= image_path ('banner.jpg') %>)" >
   <div class="container">
     <h1>Skills</h1>
-    <p>Riche d’un parcours dans les arts-appliqués, j’ai professionnalisé
-    mes compétences en développement web. Je souhaite mettre à profit de nombreuses
-  skills acquises dans la conception de produits et de solutions sur-mesure, qui s’apparentent au mode de travail agile : adaptabilité
-à l’exigence client, gestion d’équipe hyper réactive, méthodes orientées résultat, autonomie et
-exigence qualitative.
-</p>
+
     <% if user_signed_in? %>
     <div class="admin-add">
       <%= link_to 'Add a new skill', new_skill_path, class: 'admin_alternatives' %>
