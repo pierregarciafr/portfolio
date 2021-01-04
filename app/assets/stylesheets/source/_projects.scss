@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#portfolio{ /* largeur pour le smartphone */
+#dev_projects{ /* largeur pour le smartphone */
   background-color: var(--gris);
   color: var(--dominante);
   height: inherit;
@@ -15,7 +15,7 @@
     justify-content: space-around;
     grid-column-gap: 40px;
     grid-row-gap: 80px;
-    .portfolio_card {
+    .dev_project_card {
       width: 510px;
       height: 340px;
       border-radius: 15px;
@@ -117,10 +117,10 @@
   grid-template-columns: 400px 1fr;
 
   grid-gap: 1em;
-  .portfolio_image {
+  .dev_project_image {
     grid-column: 1;
   }
-  .portfolio_content {
+  .dev_project_content {
     grid-column: 2;
   }
 }
@@ -128,7 +128,7 @@
 .card_strip {
   grid-template-columns: 1fr;
   }
-    .portfolio_content {
+    .dev_project_content {
     grid-column: 1;
   }
 }
