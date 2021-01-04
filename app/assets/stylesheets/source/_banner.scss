@@ -3,6 +3,12 @@
   background-attachment: fixed;
   background-size: cover;
   color: var(--white);
+  .chapeau {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
   .img_vignette {
     background-image: url("https://res.cloudinary.com/droxurcle/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,co_rgb:b43131,g_face:auto,h_80,o_100,r_max,w_80/v1609713744/portfolio/img_2858_1024_NB_oatvzx.jpg");
     float: left;
@@ -11,9 +17,13 @@
     //border: 2px solid white;
     border-radius: 50%;
     margin-right: 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+
   }
   h1 {
     color: var(--complementaire);
+    margin: 0;
   }
   p {
     font-weight: 200;
@@ -25,7 +35,7 @@
     border-radius: 5px;
     padding: 0.5em 1em;
     color: var(--white);
-    margin: 6em 0 8em 0;
+    //margin: 6em 0 8em 0;
     transition-property: opacity;
     transition-duration: 0.5s;
     transition-delay: 0.2s;

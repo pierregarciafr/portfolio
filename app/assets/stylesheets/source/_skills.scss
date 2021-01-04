@@ -10,10 +10,10 @@
   height: inherit;
 
   .skills_cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 100px);
-    justify-content: start;
-    grid-gap: 1em;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, 100px);
+    // justify-content: start;
+    // grid-gap: 1em;
 
     // .admin_alternatives {
     //   margin: 1em 0;
@@ -31,8 +31,13 @@
     //     }
     //   }
     // }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
 
     .skill_card {
+      margin: 1em 2em 1em 0;
       width: 100px;
       height: 130px;
       padding: 15px 10px;

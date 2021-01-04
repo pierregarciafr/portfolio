@@ -1,24 +1,24 @@
 <section id="banner" style="background-image: linear-gradient(rgba(33, 10, 172,0.3), rgba(33, 10, 172,0.3)),url(<%= cl_image_path('w5siapdg7iguyb4agmd6noqg66tg') %>)">
   <div class="container">
-    <div>
+    <div class="chapeau">
       <div class='img_vignette'>
-<%#=cl_image_tag("portfolio/img_2858_1024_NB_oatvzx.jpg", :aspect_ratio=>"1:1", :border=>"1px_solid_rgb:ffffff", :color=>"#b43131", :gravity=>"face:center", :height=>80, :opacity=>100, :radius=>"max", :width=>80, :crop=>"fill")  %>    </div>
-      <div>
-        <h1 style="color: #a99c7f">Pierre Garcia<br>
-          <span style="color:#FEFDED">
-            Développeur Fullstack
-          </span>
-        </h1>
       </div>
+      <h1>Pierre Garcia<br>
+        <span style="color:#FEFDED">
+          Développeur Fullstack
+        </span>
+      </h1>
+
     </div>
+
     <p>Développeur Junior, je mets à profit de nombreuses
       skills acquises dans la conception de produits et de solutions sur-mesure, qui s’apparentent au mode de travail agile : adaptabilité
       à l’exigence client, gestion d’équipe hyper réactive, méthodes orientées résultat, autonomie et
       exigence qualitative. Familier du code depuis l'adolescence, riche d’un parcours dans les arts-appliqués, j’ai professionnalisé
       mes compétences en développement web.
-      Je souhaite intégrer une équipe à taille humaine, qui me permette d'évoluer en Back et Front, apporter mes connaissances, et consolider mes bonnes pratiques.</p>
-    <p>
+      Je souhaite intégrer une équipe à taille humaine, qui me permette d'évoluer en Back et Front, apporter mes connaissances, et consolider mes bonnes pratiques.
     </p>
+
     <% if !user_signed_in? %>
       <a class="button" href="mailto:pierrebgarciad@gmail.com?subject=Hello Pierre">Contact</a>
     <% end %>
