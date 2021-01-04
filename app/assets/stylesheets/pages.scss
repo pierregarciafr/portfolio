@@ -79,7 +79,6 @@ footer {
 }
 
 
-
 .admin-add {
   padding: 1em 0;
 }
@@ -102,11 +101,11 @@ a.admin_alternatives {
   display: flex;
   justify-content: end;
 }
-
+/*
 @media(max-width: 768px) {
   .container{ width: 95%; }
   .dev_project_card { width: 80%; }
-}
+}*/
 #contact{
   background-color: var(--complementaire-claire);
   background-position: center center;
