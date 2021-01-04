@@ -1,4 +1,4 @@
-<section id="portfolio">
+<section id="dev_projects">
   <div class="container">
     <h1>Portfolio</h1>
 
@@ -10,8 +10,8 @@
         </div>
       <% end %>
 
-      <% @portfolio.each do |project| %>
-        <%= render 'portfolio_card', project: project %>
+      <% @dev_projects.each do |project| %>
+        <%= render 'dev_project_card', project: project %>
       <% end %>
     </div>
   </div>
